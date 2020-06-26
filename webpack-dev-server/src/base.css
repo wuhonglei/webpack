@@ -1,3 +1,6 @@
-body * {
-    color: red;
+@import url('./import.css');
+body {
+    & * {
+        color: red;
+    }
 }

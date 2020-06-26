@@ -56,6 +56,9 @@ config
     .end()
     .use('css')
     .loader('css-loader') // 应用 css-loader
+    .end()
+    .use('postcss')
+    .loader('postcss-loader')
     .end();
 
 config
