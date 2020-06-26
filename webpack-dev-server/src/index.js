@@ -1,4 +1,5 @@
 import axios from 'axios';
+import './base.css';
 
 /**
  *  <button id="queryBtn">请求数据</button>
