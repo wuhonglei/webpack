@@ -20,13 +20,6 @@ module.exports = {
         },
         before(app, server, compiler) {
             mock(app);
-        },
-        after(app, server, compiler) { // NOT WORK
-            console.info('after is running...');
-            app.get('/other', (req, res) => {
-                console.info('拦截到响应', res);
-                res.json({ data: [1, 2, 3, 4] });
-            });
         }
     },
     devtool: 'inline-source-map'
