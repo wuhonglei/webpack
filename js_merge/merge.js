@@ -1,7 +1,8 @@
+// 参考 https://www.runoob.com/nodejs/nodejs-fs.html
+
 const fs = require('fs');
 const path = require('path');
 const Promise = require('promise');
-const { resolve } = require('path');
 
 // 读取目录
 function readDir(dir) {
