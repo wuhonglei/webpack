@@ -36,6 +36,7 @@ export default {
   width: 400px;
   height: 200px;
   background-color: lightblue;
+  --test: red;
 
   & .child {
     width: 200px;
@@ -44,7 +45,7 @@ export default {
   }
 
   & .child p:matches(:first-child, :last-child) {
-    color: red;
+    color: var(--test);
   }
 
   &:hover {
