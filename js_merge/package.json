@@ -1,0 +1,15 @@
+{
+  "name": "js_merge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "merge.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "promise": "^8.1.0"
+  }
+}
