@@ -6,6 +6,7 @@ import './base.css';
  *  <button id="updateBtn">修改数据</button>
  *  <button id="deleteBtn">删除数据</button>
  */
+console.info('process.env.NODE_ENV', process.env.NODE_ENV);
 
 const queryBtn = document.querySelector('#queryBtn'),
     updateBtn = document.querySelector('#updateBtn'),
