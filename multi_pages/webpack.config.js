@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -8,7 +9,7 @@ module.exports = {
         login: './src/login.js'
     },
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].[hash].js',
         path: path.resolve(__dirname, './dist')
     },
     optimization: {
@@ -18,6 +19,7 @@ module.exports = {
         },
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: './public/index.html',
             filename: 'index.html',

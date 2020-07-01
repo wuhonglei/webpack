@@ -5,5 +5,5 @@ console.info('index.js');
 test();
 
 forEach([1, 2, 3], (item) => {
-    console.info(item);
+    console.info(item, ' ');
 })
