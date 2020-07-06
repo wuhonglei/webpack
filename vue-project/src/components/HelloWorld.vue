@@ -1,29 +1,38 @@
 <template>
 	<div class="hello">
 		<button @click="getData">获取数据</button>
-		<div class="container">
+		<!-- <div class="container">
 			<div class="child">
 				<p>第一个</p>
 				<p>第二个</p>
 				<p>第三个</p>
 			</div>
-		</div>
+		</div> -->
 		<input type="text" v-model="name">
 		{{name}}
+		<avatar username="Jane Doe"></avatar>
+		<avatar username="吴洪磊" :src="imgSrc"></avatar>
+		<avatar username="林健"></avatar>
 	</div>
 </template>
 
 <script>
 import axios from "axios";
+import Avatar from 'vue-avatar'
+import imgSrc from './person.jpeg';
 
 export default {
 	name: "HelloWorld",
+	components: {
+		Avatar
+	},
 	props: {
 		msg: String
 	},
 	data () {
 		return {
-			name: ''
+			name: '',
+			imgSrc: imgSrc
 		};
 	},
 	watch: {
