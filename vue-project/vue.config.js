@@ -18,5 +18,13 @@ module.exports = {
                 entryOnly: false
             }])
             .end();
+
+        config
+            .optimization
+            .sideEffects(true)
+            .splitChunks({
+                chunks: 'all'
+            })
+            .end();
     }
 };

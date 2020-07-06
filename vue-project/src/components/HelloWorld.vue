@@ -8,6 +8,8 @@
 				<p>第三个</p>
 			</div>
 		</div>
+		<input type="text" v-model="name">
+		{{name}}
 	</div>
 </template>
 
@@ -19,11 +21,30 @@ export default {
 	props: {
 		msg: String
 	},
+	data () {
+		return {
+			name: ''
+		};
+	},
+	watch: {
+		name(newValue) {
+			if (newValue.includes('wuhonglei')) {
+				import(/* webpackChunkName: "lodash" */'./math.js')
+					.then((module) => {
+						debugger;
+						// console.info(cube(3));
+					})
+			}
+		}
+	},
 	methods: {
 		getData() {
 			axios.get("/list").then(({ data }) => {
 				console.info(data);
 			});
+		},
+		watchInput(event) {
+			debugger
 		}
 	}
 };
