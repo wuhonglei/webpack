@@ -1,25 +1,28 @@
 <template>
-	<div class="hello">
-		<button @click="getData">获取数据</button>
-		<!-- <div class="container">
-			<div class="child">
-				<p>第一个</p>
-				<p>第二个</p>
-				<p>第三个</p>
+	<div class="container h-screen bg-gray-300 p-10">
+		<div class="p-10 bg-white rounded">
+			<!-- toolbar -->
+			<div class="flex items-center bg-orange-200 p-2">
+				<img src="https://svgsilh.com/svg/151889.svg" class="w-10 pr-2" alt="">
+				<div class="text-yellow-900 text-sm">
+					Congrats you're eligible for a
+					<b>Coupon Code</b> in this order
+				</div>
 			</div>
-		</div> -->
-		<input type="text" v-model="name">
-		{{name}}
-		<avatar username="Jane Doe"></avatar>
-		<avatar username="吴洪磊" :src="imgSrc"></avatar>
-		<avatar username="林健"></avatar>
+			<!-- order list -->
+			<div class="text-xl font-bold py-4">
+				Order Summary
+			</div>
+			<!-- item -->
+			<div class="border rounded p-2">xssdfasf</div>
+		</div>
 	</div>
 </template>
 
 <script>
 import axios from "axios";
-import Avatar from 'vue-avatar'
-import imgSrc from './person.jpeg';
+import Avatar from "vue-avatar";
+import imgSrc from "./person.jpeg";
 
 export default {
 	name: "HelloWorld",
@@ -29,20 +32,21 @@ export default {
 	props: {
 		msg: String
 	},
-	data () {
+	data() {
 		return {
-			name: '',
+			name: "",
 			imgSrc: imgSrc
 		};
 	},
 	watch: {
 		name(newValue) {
-			if (newValue.includes('wuhonglei')) {
-				import(/* webpackChunkName: "lodash" */'./math.js')
-					.then((module) => {
+			if (newValue.includes("wuhonglei")) {
+				import(/* webpackChunkName: "lodash" */ "./math.js").then(
+					module => {
 						debugger;
 						// console.info(cube(3));
-					})
+					}
+				);
 			}
 		}
 	},
@@ -53,7 +57,7 @@ export default {
 			});
 		},
 		watchInput(event) {
-			debugger
+			debugger;
 		}
 	}
 };
@@ -61,25 +65,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="postcss" scoped>
-.container {
-  box-sizing: border-box;
-  width: 400px;
-  height: 200px;
-  background-color: lightblue;
-  --test: red;
-
-  & .child {
-    width: 200px;
-    height: 100px;
-    filter: opacity(0.5);
-  }
-
-  & .child p:matches(:first-child, :last-child) {
-    color: var(--test);
-  }
-
-  &:hover {
-       box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  }
-}
 </style>

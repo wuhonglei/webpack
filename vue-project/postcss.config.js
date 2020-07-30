@@ -6,6 +6,7 @@ module.exports = {
         },
         'postcss-reporter': {
             clearReportedMessages: true
-        }
+        },
+        tailwindcss: {}
     }
 }
