@@ -20,6 +20,9 @@
 </template>
 
 <script>
+
+// 参考：https://codepen.io/justaashir/pen/ExVPpPR?editors=1000
+
 import axios from "axios";
 import Avatar from "vue-avatar";
 import imgSrc from "./person.jpeg";
